@@ -1,0 +1,1 @@
+# latex_paper_template

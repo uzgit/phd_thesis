@@ -1,0 +1,27 @@
+% Preamble
+\documentclass[11pt]{article}
+
+% Packages
+\usepackage[top=2.54cm, bottom=2.54cm, right=2.54cm, left=2.54cm]{geometry}
+\usepackage{lipsum}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{datetime}
+\newdateformat{specialdate}{\twodigit{\THEDAY} \ \monthname[\THEMONTH] \THEYEAR}
+
+\usepackage[pdfusetitle]{hyperref}
+
+\author{AUTHOR}
+\title{TEMPLATE}
+\date{\specialdate\today}
+
+\begin{document}
+    \maketitle
+
+    \section{Introduction}
+    \input{sections/introduction.tex}
+
+    \bibliography{main}
+    \bibliographystyle{plain}
+
+\end{document}
