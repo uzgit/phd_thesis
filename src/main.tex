@@ -1,27 +1,37 @@
 % Preamble
-\documentclass[11pt]{article}
+\documentclass[10pt,twoside,b5paper]{book}
 
 % Packages
-\usepackage[top=2.54cm, bottom=2.54cm, right=2.54cm, left=2.54cm]{geometry}
 \usepackage{lipsum}
 \usepackage{graphicx}
 \usepackage{xcolor}
 \usepackage{datetime}
+\usepackage[scaled]{helvet}
 \newdateformat{specialdate}{\twodigit{\THEDAY} \ \monthname[\THEMONTH] \THEYEAR}
+%\usepackage[showframe=true,top=1cm,bottom=1cm,left=1cm,right=1cm]{geometry}
+\usepackage[top=3cm,bottom=2cm,left=2cm,right=2cm]{geometry}
 
 \usepackage[pdfusetitle]{hyperref}
 
-\author{AUTHOR}
-\title{TEMPLATE}
+\usepackage[T1]{fontenc}
+\renewcommand\familydefault{\sfdefault}
+
+\author{Joshua David Springer}
+\title{Autonomous Precision Drone Landing on Marked Landing Pads and Solidified Lava Flows}
 \date{\specialdate\today}
 
 \begin{document}
-    \maketitle
 
-    \section{Introduction}
-    \input{sections/introduction.tex}
+	\input{sections/title_page.tex}
+	\input{sections/signatures.tex}
 
-    \bibliography{main}
-    \bibliographystyle{plain}
+	\input{sections/english_abstract.tex}
+	\input{sections/icelandic_abstract.tex}
+
+	\section{Introduction}
+	\input{sections/introduction.tex}
+
+	\bibliography{references}
+	\bibliographystyle{plain}
 
 \end{document}
