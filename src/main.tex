@@ -7,7 +7,8 @@
 \usepackage{xcolor}
 \usepackage{datetime}
 \usepackage[scaled]{helvet}
-\newdateformat{specialdate}{\twodigit{\THEDAY} \ \monthname[\THEMONTH] \THEYEAR}
+%\newdateformat{specialdate}{\twodigit{\THEDAY} \ \monthname[\THEMONTH] \THEYEAR}
+\newdateformat{specialdate}{\THEDAY \ \monthname[\THEMONTH] \THEYEAR}
 %\usepackage[showframe=true,top=1cm,bottom=1cm,left=1cm,right=1cm]{geometry}
 \usepackage[top=3cm,bottom=2cm,left=2cm,right=2cm]{geometry}
 
@@ -22,14 +23,42 @@
 
 \begin{document}
 
+	\frontmatter
 	\input{sections/title_page.tex}
 	\input{sections/signatures.tex}
 
-	\input{sections/english_abstract.tex}
-	\input{sections/icelandic_abstract.tex}
+	\tableofcontents
+	\newpage
+	
 
-	\section{Introduction}
-	\input{sections/introduction.tex}
+	\mainmatter
+	\chapter{Introduction}
+		\input{sections/introduction.tex}
+		\newpage
+
+		\section{Acknowledgements}
+		\input{sections/acknowledgements.tex}
+		\newpage
+
+		\section{Abstract}
+		\input{sections/english_abstract.tex}
+		\newpage
+
+		\section{Abstrakt á Íslensku}
+		\input{sections/icelandic_abstract.tex}
+		\newpage
+
+	\chapter{Structured Landing Sites with Fiducial Markers}
+		\section{Overview}
+		\section{Fiducial System Tests and Modifications}
+		\section{First Autonomous Landing Setup}
+		\section{Improved Autonomous Landing Setup}
+
+	\chapter{Viable Landing Sites in Solidified Lava Flows}
+		\section{Overview}
+		\section{RAVEN Fieldwork, Summer 2022}
+		\section{Bolluhraun Fieldwork}
+		\section{Viable Landing Site Detection}
 
 	\bibliography{references}
 	\bibliographystyle{plain}
