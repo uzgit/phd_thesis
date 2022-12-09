@@ -1,0 +1,64 @@
+This section outlines the overall story of the PhD,
+which starts in the author's master project,
+on the topic of autonomous drone landing, in simulation.
+We discuss the motivations for each step of the research,
+and the conditions for transitioning between each.
+
+%\begin{center}
+%\begin{tikzpicture}[
+%roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},
+%%squarednode/.style={rectangle, draw=red!60, fill=red!5, very thick, minimum size=5mm},
+%squarednode/.style={rounded corners, draw=red!60, fill=red!5, very thick, minimum size=5mm},
+%]
+%%Nodes
+%\node[squarednode, text width=6cm]	(msc)					{ MSc Thesis: Autonomous Landing of a Multicopter Using Computer Vision };
+%\node[state, draw=none, text width=6cm, text height=1cm]	(raven_fagradalsfjall_spacer)	[below=of msc] {};
+%\node[squarednode, text width=6cm]	(raven_fagradalsfjall)	[right=of raven_fagradalsfjall_spacer]		{ Heavy-lift experiment over Fagradalsfjall, Summer 2021 };
+%\node[squarednode, text width=6cm]	(evaluation)	[below=of raven_fagradalsfjall_spacer]		{ Evaluation of April Tag and WhyCode: Orientation ambiguity, detection rate};
+%\node[squarednode, text width=6cm]	(poc)		[below=of evaluation]	{ Fiducial landing proof of concept with actuated, gimbal-mounted camera };
+%\node[state, draw=none]	(raven_fieldwork_2022_spacer)	[below=of poc] {};
+%\node[squarednode, text width=6cm]	(raven_fieldwork_2022)	[right=of raven_fieldwork_2022_spacer]		{ RAVEN fieldwork, Summer 2022 };
+%\node[squarednode, text width=6cm]	(refinement)	[below=of raven_fieldwork_2022_spacer]		{ Refinement of proof of concept to mitigate erroneous control signals };
+%\node[squarednode, text width=6cm]	(lava_landings_concept)	[right=of refinement]		{ Lava flow landing concept };
+%
+%%Lines
+%\draw[->] (msc.south) -- (evaluation.north);
+%\draw[->] (evaluation.south) -- (poc.north);
+%\draw[->] (poc.south) -- (refinement.north);
+%%\draw[->] (uppercircle.south) -- (maintopic.north);
+%%\draw[->] (maintopic.east) -- (rightsquare.west);
+%%\draw[->] (rightsquare.south) .. controls +(down:7mm) and +(right:7mm) .. (lowercircle.east);
+%\end{tikzpicture}
+%\end{center}
+\begin{center}
+\begin{tikzpicture}[
+roundnode/.style={circle, draw=green!60, fill=green!5, very thick, minimum size=7mm},
+%squarednode/.style={rectangle, draw=red!60, fill=red!5, very thick, minimum size=5mm},
+squarednode/.style={rounded corners, draw=red!60, fill=red!5, very thick, minimum size=5mm},
+]
+%Nodes
+\node[squarednode, text width=5cm] (msc) 			at (0,0)	{ MSc Thesis: Autonomous Landing of a Multicopter Using Computer Vision };
+\node[squarednode, text width=5cm] (raven_fagradalsfjall) 	at (7,-2) 	{ Heavy-lift experiment over Fagradalsfjall, Summer 2021 };
+\node[squarednode, text width=5cm] (evaluation) 		at (0,-2) 	{ Evaluation of April Tag and WhyCode: Orientation ambiguity, detection rate};
+\node[squarednode, text width=5cm] (poc) 			at (0,-4) 	{ Fiducial landing proof of concept with actuated, gimbal-mounted camera };
+\node[squarednode, text width=6cm] (raven_fieldwork_2022)	at (7,-5.5)	{ RAVEN fieldwork, Summer 2022 };
+\node[squarednode, text width=6cm] (lava_landing_concept)	at (7, -6.5)	{ Lava flow landing concept };
+\node[squarednode, text width=5cm] (refinement)			at (0,-8)	{ Refinement of proof of concept to mitigate erroneous control signals };
+\node[squarednode, text width=6cm] (lava_processing)		at (7,-8)	{ How to process 3D data from lava flows };
+\node[squarednode, text width=6cm] (lava_landing_implementation)		at (7,-10)	{ Lava flow landing implementation };
+\node[squarednode, text width=6cm] (unified)		at (3.5,-11) 	{ Unified solution };
+
+%Lines
+\draw[->] (msc.south) -- (evaluation.north);
+\draw[->] (raven_fagradalsfjall.south) -- (raven_fieldwork_2022.north);
+\draw[->] (evaluation.south) -- (poc.north);
+\draw[->] (poc.south) -- (refinement.north);
+\draw[->] (refinement.south) -- (unified.north);
+\draw[->] (raven_fieldwork_2022.south) -- (lava_landing_concept.north);
+\draw[->] (lava_landing_concept.south) -- (lava_processing.north);
+\draw[->] (lava_processing.south) -- (lava_landing_implementation.north);
+\draw[->] (lava_landing_implementation.south) -- (unified.north);
+
+
+\end{tikzpicture}
+\end{center}
