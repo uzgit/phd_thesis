@@ -10,16 +10,17 @@ squarednode/.style={rounded corners, draw=red!60, fill=red!5, very thick, minimu
 ]
 %Nodes
 \node[squarednode, text width=5.5cm] (msc) at (0,0) { MSc Thesis: \emph{Autonomous Landing of a Multicopter Using Computer Vision} (in simulation) };
-\node[squarednode, text width=6cm] (first_attempt) at (0,-1.75) { First attempt of autonomous fiducial landing using a physical drone platform };
-\node[squarednode, text width=5cm] (raven_fagradalsfjall) 	at (8,-4.25) 	{ Heavy-lift experiment over Fagradalsfjall, Summer 2021 };
-\node[squarednode, text width=6cm] (evaluation) 		at (0,-3.3) 	{ Evaluation of April Tag and WhyCode: Orientation ambiguity, detection rate};
-\node[squarednode, text width=5cm] (poc) 			at (0,-5.5) 	{ Fiducial landing proof of concept with actuated, gimbal-mounted camera };
-\node[squarednode, text width=5cm] (raven_fieldwork_2022)	at (8,-6.5)	{ RAVEN fieldwork, Summer 2022 };
-\node[squarednode, text width=5cm] (lava_landing_concept)	at (8, -7.25)	{ Lava flow landing concept };
-\node[squarednode, text width=5cm] (refinement)			at (0,-8.25)	{ Refinement of proof of concept to mitigate erroneous control\\signals };
-\node[squarednode, text width=5cm] (lava_processing)		at (8,-9.5)	{ How to process 3D data from lava flows };
-\node[squarednode, text width=5cm] (lava_landing_implementation)		at (8,-10.75)	{ Lava flow landing implementation };
-\node[squarednode, text width=5cm] (unified)		at (4,-12.5) 	{ Unified solution };
+\node[squarednode, text width=4cm] (first_attempt) at (0,-2) { First attempt of autonomous fiducial landing using a physical drone platform };
+\node[squarednode, text width=4cm] (raven_fagradalsfjall) 	at (8,-4.25) 	{ Heavy-lift experiment over Fagradalsfjall, Summer 2021 };
+\node[squarednode, text width=4cm] (evaluation) 		at (0,-4.5) 	{ Evaluation of April Tag and WhyCode: Orientation ambiguity, detection rate};
+\node[squarednode, text width=4cm] (poc) 			at (0,-6.85) 	{ Fiducial landing proof of concept with actuated, gimbal-mounted camera };
+\node[squarednode, text width=4cm] (raven_fieldwork_2022)	at (8,-6.5)	{ RAVEN fieldwork, Summer 2022 };
+\node[squarednode, text width=4cm] (lava_landing_concept)	at (8, -7.75)	{ Lava flow landing concept };
+\node[squarednode, text width=3.5cm] (refinement)			at (0,-10)	{ Refinement of proof of concept to mitigate erroneous control\\signals };
+\node[squarednode, text width=2.5cm] (psdk_best_practices)			at (0,-13)	{ Best practices working with PSDK };
+\node[squarednode, text width=4cm] (lava_processing)		at (8,-9)	{ How to process 3D data from lava flows };
+\node[squarednode, text width=4cm] (lava_landing_implementation)		at (8,-10.75)	{ Lava flow landing implementation };
+\node[squarednode, text width=4cm] (unified)		at (4,-13) 	{ Unified solution };
 
 %Lines
 \draw[->] (msc.south) -- (first_attempt.north);
@@ -34,6 +35,7 @@ squarednode/.style={rounded corners, draw=red!60, fill=red!5, very thick, minimu
 \draw[->] (lava_landing_implementation.south) to [out=270,in=90] (unified.north);
 \draw[->] (evaluation) to [out=0,in=180] (lava_landing_concept);
 \draw[->] (poc) to [out=0,in=180] (lava_landing_concept);
+\draw[->] (unified) to [out=180,in=0] (psdk_best_practices);
 
 
 \end{tikzpicture}
